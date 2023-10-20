@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "netxd_customer/netxd_customer";
+
+service CustomerService {
+    rpc CreateCustomer(CustomerRequest) returns (CustomerResponse);}
+
+message CustomerRequest {
+    int64 CustomerId = 1;
+}
+
+message CustomerResponse{
+    string count =1;
+}
